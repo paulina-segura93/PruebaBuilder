@@ -4,10 +4,9 @@
   "description": "Sistema de Gestión de Causas - Vue.js",
   "main": "src/main.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "dev": "vite",
-    "build-vite": "vite build",
+    "serve": "vite --port 8080",
+    "build": "vite build",
+    "dev": "vite --port 8080",
     "preview": "vite preview",
     "start": "npm run serve"
   },
