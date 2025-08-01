@@ -135,7 +135,7 @@ export default {
       this.$delete(this.errors, documentId)
     },
     setError(documentId, message) {
-      this.$set(this.errors, documentId, message)
+      this.errors[documentId] = message
     },
     hasError(documentId) {
       return !!this.errors[documentId]
