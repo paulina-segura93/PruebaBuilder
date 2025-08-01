@@ -1,36 +1,538 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PruebaBuilder</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .container {
-            text-align: center;
-            margin-top: 100px;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #666;
-            font-size: 18px;
-        }
-    </style>
+    <title>Sistema de Gestión de Causas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>PruebaBuilder</h1>
-        <p>Welcome to your Builder.io project!</p>
-        <p>The development server is now running.</p>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">⚖️</span>
+                    <h1>Sistema de Gestión de Causas</h1>
+                </div>
+                <nav class="header-nav">
+                    <a href="#" class="nav-link active">Consultar</a>
+                    <a href="#" class="nav-link">Registrar</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">👁️</span>
+                        Consultar
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">👤</span>
+                        Asignar
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">✏️</span>
+                        Editar
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">🗑️</span>
+                        Eliminar
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">➕</span>
+                        Crear
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Content area -->
+            <main class="content">
+                <div class="content-header">
+                    <h2>Causa</h2>
+                </div>
+
+                <!-- Case information grid -->
+                <div class="case-info-grid">
+                    <div class="case-info-row">
+                        <div class="info-group">
+                            <label>RolNs</label>
+                            <span>DR-59-00096-2023</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Carátulado</label>
+                            <span>SI DIRECCIÓN REGIONAL DE COQUIMBO / MENA</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Fecha presentación</label>
+                            <span>📅 15/07/2023 12:20:05</span>
+                        </div>
+                    </div>
+
+                    <div class="case-info-row">
+                        <div class="info-group">
+                            <label>Rol</label>
+                            <span>23-9-000652-7</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Procedimiento</label>
+                            <span>General de reclamo</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Fecha traslado</label>
+                            <span>📅 15/07/2023 12:20:05</span>
+                        </div>
+                    </div>
+
+                    <div class="case-info-row">
+                        <div class="info-group">
+                            <label>Tribunal</label>
+                            <span>TTA de La Serena</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Materia(s)</label>
+                            <span>Devolución de impuestos</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Abogado</label>
+                            <span>José Espinoza</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial information -->
+                <div class="financial-info">
+                    <div class="financial-row">
+                        <div class="financial-group">
+                            <label>Perjuicio fiscal Monto reclama</label>
+                            <span class="amount">$40.000.000</span>
+                        </div>
+                        <div class="financial-group">
+                            <label>Ver Resolución TTA</label>
+                            <a href="#" class="link">Ver Resolución TTA</a>
+                        </div>
+                        <div class="financial-group">
+                            <label>Causal TER</label>
+                            <div class="radio-group">
+                                <input type="radio" id="si" name="causal" checked>
+                                <label for="si">SÍ</label>
+                                <input type="radio" id="no" name="causal">
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div class="financial-group">
+                            <label>Estado</label>
+                            <span>En tramitación</span>
+                        </div>
+                        <div class="financial-group">
+                            <label>Giro emitido</label>
+                            <span>NO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab navigation -->
+                <div class="tab-container">
+                    <nav class="tab-nav">
+                        <button class="tab-button active" data-tab="caso">Caso</button>
+                        <button class="tab-button" data-tab="contribuyente">Contribuyente</button>
+                        <button class="tab-button" data-tab="hitos">Hitos</button>
+                        <button class="tab-button" data-tab="primera">Primera instancia</button>
+                        <button class="tab-button" data-tab="segunda">Segunda instancia</button>
+                        <button class="tab-button" data-tab="corte">Corte suprema</button>
+                    </nav>
+
+                    <!-- Tab content -->
+                    <div class="tab-content active" id="caso">
+                        <form class="case-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="tipo-recurso">Tipo recurso</label>
+                                    <select id="tipo-recurso" class="form-select">
+                                        <option>Apelación</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fecha-interposicion">Fecha interposición</label>
+                                    <input type="date" id="fecha-interposicion" class="form-input" value="2023-07-15">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="motivo-reclamo">Motivo reclamo</label>
+                                    <select id="motivo-reclamo" class="form-select">
+                                        <option>No seleccionado</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="corte">Corte</label>
+                                    <select id="corte" class="form-select">
+                                        <option>Corte Suprema</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="apoderados">Apoderados contribuyente</label>
+                                    <input type="text" id="apoderados" class="form-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fecha-sentencia">Fecha sentencia</label>
+                                    <input type="date" id="fecha-sentencia" class="form-input" value="2023-07-15">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="decision-sentencia">Decisión de sentencia</label>
+                                    <select id="decision-sentencia" class="form-select">
+                                        <option>Ha lugar en parte</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="recurrente">Recurrente</label>
+                                    <select id="recurrente" class="form-select">
+                                        <option>Ambos</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resultado-sentencia">Resultado sentencia</label>
+                                    <select id="resultado-sentencia" class="form-select">
+                                        <option>Favorable en parte</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="condena-costas">Condena en costas</label>
+                                    <select id="condena-costas" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="monto-costas">Monto costas</label>
+                                    <input type="number" id="monto-costas" class="form-input" value="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="evento-relevante">Evento relevante giro</label>
+                                    <select id="evento-relevante" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="suspension-cobro">Suspensión de cobro</label>
+                                    <select id="suspension-cobro" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="observaciones">Observaciones</label>
+                                <textarea id="observaciones" class="form-textarea" rows="4"></textarea>
+                            </div>
+
+                            <!-- Document upload section -->
+                            <div class="document-section">
+                                <div class="document-item">
+                                    <label>Sentencia</label>
+                                    <div class="document-upload">
+                                        <span class="document-icon">📄</span>
+                                        <input type="file" class="file-input" id="sentencia">
+                                    </div>
+                                </div>
+
+                                <div class="document-item">
+                                    <label>Suspensión de cobro</label>
+                                    <div class="document-upload">
+                                        <span class="document-icon">📄</span>
+                                        <input type="file" class="file-input" id="suspension">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-content" id="contribuyente">
+                        <form class="case-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="unidad-responsable">Unidad responsable</label>
+                                    <select id="unidad-responsable" class="form-select">
+                                        <option>X DIRECCIÓN REGIONAL PUERTO MONTT</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fecha-contestacion">Fecha contestación</label>
+                                    <input type="date" id="fecha-contestacion" class="form-input" value="2023-07-15">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fecha-auto-prueba">Fecha auto de prueba</label>
+                                    <input type="date" id="fecha-auto-prueba" class="form-input" value="2023-07-15">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="apoderados-contrib">Apoderados contribuyente</label>
+                                    <input type="text" id="apoderados-contrib" class="form-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="existe-reclamo">Existe reclamo</label>
+                                    <input type="text" id="existe-reclamo" class="form-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="reclamo">Reclamo</label>
+                                    <div class="document-upload">
+                                        <span class="document-icon">📄</span>
+                                        <input type="file" class="file-input" id="reclamo-file">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="motivo-reclamo-text">Motivo reclamo/recurso</label>
+                                    <input type="text" id="motivo-reclamo-text" class="form-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fecha-sentencia-contrib">Fecha sentencia</label>
+                                    <input type="date" id="fecha-sentencia-contrib" class="form-input" value="2023-07-15">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fecha-notificacion">Fecha notificación sentencia al contribuyente</label>
+                                    <input type="date" id="fecha-notificacion" class="form-input" value="2023-07-15">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="decision-sentencia-contrib">Decisión de sentencia</label>
+                                    <select id="decision-sentencia-contrib" class="form-select">
+                                        <option>Ha lugar en parte</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resultado-sentencia-contrib">Resultado sentencia</label>
+                                    <select id="resultado-sentencia-contrib" class="form-select">
+                                        <option>Desfavorable</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="condena-costas-contrib">Condena en costas</label>
+                                    <select id="condena-costas-contrib" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="monto-costas-contrib">Monto costas</label>
+                                    <input type="number" id="monto-costas-contrib" class="form-input" value="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="evento-relevante-contrib">Evento relevante giro</label>
+                                    <select id="evento-relevante-contrib" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="suspension-cobro-contrib">Suspensión de cobro</label>
+                                    <select id="suspension-cobro-contrib" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="observacion-contrib">Observación</label>
+                                <textarea id="observacion-contrib" class="form-textarea" rows="4"></textarea>
+                            </div>
+
+                            <!-- Document upload section -->
+                            <div class="document-section">
+                                <div class="document-item">
+                                    <label>Sentencia</label>
+                                    <div class="document-upload">
+                                        <span class="document-icon">📄</span>
+                                        <input type="file" class="file-input" id="sentencia-contrib">
+                                    </div>
+                                </div>
+
+                                <div class="document-item">
+                                    <label>Notificación sentencia al contribuyente</label>
+                                    <div class="document-upload">
+                                        <span class="document-icon">📄</span>
+                                        <input type="file" class="file-input" id="notificacion-contrib">
+                                    </div>
+                                </div>
+
+                                <div class="document-item">
+                                    <label>Suspensión de cobro</label>
+                                    <div class="document-upload">
+                                        <span class="document-icon">📄</span>
+                                        <input type="file" class="file-input" id="suspension-contrib">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-content" id="hitos">
+                        <div class="case-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="tipo-recurso-hitos">Tipo recurso</label>
+                                    <select id="tipo-recurso-hitos" class="form-select">
+                                        <option>Apelación</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="libro">Libro</label>
+                                    <input type="text" id="libro" class="form-input" value="Tributario y aduanero - Art">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fecha-interposicion-hitos">Fecha interposición</label>
+                                    <input type="date" id="fecha-interposicion-hitos" class="form-input" value="2023-07-15">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="motivo-reclamo-hitos">Motivo reclamo</label>
+                                    <input type="text" id="motivo-reclamo-hitos" class="form-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="apoderados-contribuyente-hitos">Apoderados contribuyente</label>
+                                    <input type="text" id="apoderados-contribuyente-hitos" class="form-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="decision-sentencia-hitos">Decisión de sentencia</label>
+                                    <select id="decision-sentencia-hitos" class="form-select">
+                                        <option>Ha lugar en parte</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="recurrente-hitos">Recurrente</label>
+                                    <select id="recurrente-hitos" class="form-select">
+                                        <option>Ambos</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resultado-sentencia-hitos">Resultado sentencia</label>
+                                    <select id="resultado-sentencia-hitos" class="form-select">
+                                        <option>Favorable en parte</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="evento-relevante-hitos">Evento relevante giro</label>
+                                    <select id="evento-relevante-hitos" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="condena-costas-hitos">Condena en costas</label>
+                                    <select id="condena-costas-hitos" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="monto-costas-hitos">Monto costas</label>
+                                    <input type="number" id="monto-costas-hitos" class="form-input" value="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="suspension-cobro-hitos">Suspensión de cobro</label>
+                                    <select id="suspension-cobro-hitos" class="form-select">
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="observaciones-hitos">Observaciones</label>
+                                <textarea id="observaciones-hitos" class="form-textarea" rows="4"></textarea>
+                            </div>
+
+                            <!-- Document upload section -->
+                            <div class="document-section">
+                                <div class="document-item">
+                                    <label>Sentencia</label>
+                                    <div class="document-upload">
+                                        <span class="document-icon">📄</span>
+                                        <input type="file" class="file-input" id="sentencia-hitos">
+                                    </div>
+                                </div>
+
+                                <div class="document-item">
+                                    <label>Suspensión de cobro</label>
+                                    <div class="document-upload">
+                                        <span class="document-icon">📄</span>
+                                        <input type="file" class="file-input" id="suspension-hitos">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder content for other tabs -->
+                    <div class="tab-content" id="primera">
+                        <p>Contenido de Primera instancia...</p>
+                    </div>
+
+                    <div class="tab-content" id="segunda">
+                        <p>Contenido de Segunda instancia...</p>
+                    </div>
+
+                    <div class="tab-content" id="corte">
+                        <p>Contenido de Corte suprema...</p>
+                    </div>
+                </div>
+
+                <!-- Action buttons -->
+                <div class="action-buttons">
+                    <button type="button" class="btn btn-secondary">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Editar</button>
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="user-info">
+                    <div class="user-avatar">A</div>
+                    <div class="user-details">
+                        <span class="user-name">Amanda</span>
+                        <span class="user-profile">Ver perfil</span>
+                    </div>
+                    <button class="settings-btn">⚙️</button>
+                </div>
+                <div class="footer-branding">
+                    Made with <span class="logo-small">Bitly</span>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
