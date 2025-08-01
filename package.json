@@ -1,17 +1,42 @@
 {
-  "name": "code",
+  "name": "sistema-gestion-causas",
   "version": "1.0.0",
-  "description": "Prueba Builder",
-  "main": "index.js",
+  "description": "Sistema de Gestión de Causas - Vue.js",
+  "main": "src/main.js",
   "scripts": {
-    "serve": "http-server . -p 8080 -c-1",
-    "dev": "http-server . -p 8080 -c-1",
-    "start": "http-server . -p 8080 -c-1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev": "vite",
+    "build-vite": "vite build",
+    "preview": "vite preview",
+    "start": "npm run serve"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.3.4",
+    "@vue/composition-api": "^1.7.2",
+    "vue-router": "^4.2.4"
+  },
   "devDependencies": {
-    "http-server": "^14.1.1"
-  }
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/cli-plugin-router": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "http-server": "^14.1.1",
+    "vite": "^4.4.5",
+    "sass": "^1.64.1",
+    "sass-loader": "^13.3.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "keywords": [
+    "vue",
+    "case-management",
+    "legal",
+    "frontend"
+  ],
+  "author": "Paulina Segura",
+  "license": "ISC"
 }
