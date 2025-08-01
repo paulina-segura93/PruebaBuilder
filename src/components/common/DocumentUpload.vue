@@ -97,7 +97,7 @@ export default {
     },
     processFile(file, documentId) {
       // Clear previous errors
-      this.$delete(this.errors, documentId)
+      delete this.errors[documentId]
       
       // Validate file
       if (!this.validateFile(file, documentId)) {
