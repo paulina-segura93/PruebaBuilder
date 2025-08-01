@@ -1,0 +1,14 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "Prueba Builder",
+  "main": "index.js",
+  "scripts": {
+    "serve": "echo 'No serve script configured yet'",
+    "dev": "echo 'No dev script configured yet'",
+    "start": "echo 'No start script configured yet'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
