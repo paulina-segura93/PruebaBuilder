@@ -132,7 +132,7 @@ export default {
     },
     removeFile(documentId) {
       this.$emit('remove', documentId)
-      this.$delete(this.errors, documentId)
+      delete this.errors[documentId]
     },
     setError(documentId, message) {
       this.errors[documentId] = message
