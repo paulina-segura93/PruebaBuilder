@@ -185,7 +185,7 @@
 
 /* Enhanced visual feedback */
 .form-input:valid {
-    border-color: #10b981;
+    border-color: var(--sii-blue);
 }
 
 .form-select:focus,
