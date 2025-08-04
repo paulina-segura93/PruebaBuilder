@@ -112,8 +112,9 @@ export default {
         observaciones: ''
       },
       documents: [
-        { id: 'sentencia', label: 'Sentencia', file: null },
-        { id: 'suspension', label: 'Suspensión de cobro', file: null }
+        { id: 'acto-reclamado', label: 'Acto Reclamado', file: null },
+        { id: 'otros-documentos', label: 'Otros documentos', file: null },
+        { id: 'archivo-aca', label: 'Archivo ACA', file: null }
       ],
       // Form options
       causaTEROptions: [
