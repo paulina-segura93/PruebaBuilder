@@ -53,9 +53,7 @@ export default {
         nombreContribuyente: ''
       },
       documents: [
-        { id: 'acto-reclamado', label: 'Acto Reclamado', file: null },
-        { id: 'otros-documentos', label: 'Otros documentos', file: null },
-        { id: 'archivo-aca', label: 'Archivo ACA', file: null }
+        { id: 'acto-reclamado', label: 'Acto Reclamado', file: null }
       ],
       // Form options (none needed for basic text fields)
     }
