@@ -66,22 +66,7 @@ export default {
         { id: 'otros-documentos', label: 'Otros documentos', file: null },
         { id: 'archivo-aca', label: 'Archivo ACA', file: null }
       ],
-      // Form options
-      causaTEROptions: [
-        { value: '', label: 'Seleccionar...' },
-        { value: 'si', label: 'Sí' },
-        { value: 'no', label: 'No' }
-      ],
-      estadoOptions: [
-        { value: 'en-tramitacion', label: 'En tramitación' },
-        { value: 'resuelto', label: 'Resuelto' },
-        { value: 'archivado', label: 'Archivado' },
-        { value: 'suspendido', label: 'Suspendido' }
-      ],
-      giroEmitidoOptions: [
-        { value: 'no', label: 'No' },
-        { value: 'si', label: 'Sí' }
-      ]
+      // Form options (none needed for basic text fields)
     }
   },
   watch: {
