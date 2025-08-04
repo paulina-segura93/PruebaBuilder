@@ -1,0 +1,241 @@
+/* Responsive design */
+@media (max-width: 1024px) {
+    .main-content {
+        margin: 0;
+    }
+    
+    .content {
+        margin: 0.5rem;
+    }
+    
+    .case-info-row,
+    .financial-row,
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .document-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        order: 2;
+    }
+    
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 0 1rem;
+    }
+    
+    .sidebar-link {
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+    
+    .sidebar-link:hover {
+        border-left: none;
+        border-bottom-color: #667eea;
+    }
+    
+    .content {
+        order: 1;
+        margin: 0.5rem;
+    }
+    
+    .case-info-row,
+    .financial-row,
+    .form-grid,
+    .document-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-nav {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .action-buttons {
+        flex-direction: column-reverse;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .content {
+        padding: 1rem;
+        margin: 0.25rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+    
+    .financial-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .tab-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .notification-container {
+        right: 10px;
+        left: 10px;
+    }
+    
+    .notification {
+        max-width: none;
+    }
+    
+    .case-info-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .info-group {
+        padding: 0.75rem;
+        background: #f8fafc;
+        border-radius: 6px;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .financial-group {
+        padding: 0.75rem;
+        background: white;
+        border-radius: 6px;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .content {
+        padding: 1rem;
+        margin: 0.25rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+    
+    .financial-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .tab-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Enhanced responsive for document uploads */
+@media (max-width: 768px) {
+    .document-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .document-upload {
+        padding: 1.5rem;
+        min-height: 100px;
+    }
+    
+    .document-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive improvements for form fields */
+@media (max-width: 640px) {
+    .form-grid {
+        gap: 1rem;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: 0.625rem;
+        font-size: 0.875rem;
+    }
+    
+    .form-select {
+        padding-right: 2rem;
+        background-size: 1.25em 1.25em;
+    }
+}
+
+/* Ultra-wide screen optimizations */
+@media (min-width: 1400px) {
+    .main-content {
+        max-width: 1600px;
+    }
+    
+    .form-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .document-section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet landscape optimizations */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .sidebar {
+        width: 180px;
+    }
+    
+    .sidebar-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .sidebar-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile landscape optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 0.5rem 2rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.125rem;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+    
+    .tab-button {
+        padding: 0.5rem 1rem;
+    }
+}
