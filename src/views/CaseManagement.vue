@@ -289,8 +289,8 @@ export default {
 }
 
 .tab-button.active {
-  color: #667eea;
-  border-bottom-color: #667eea;
+  color: var(--sii-blue);
+  border-bottom-color: var(--sii-blue);
 }
 
 .tab-content-container {
