@@ -292,7 +292,7 @@ export default {
 }
 
 .form-input:valid {
-  border-color: #10b981;
+  border-color: var(--sii-blue);
 }
 
 .checkbox-label {
@@ -327,7 +327,7 @@ export default {
 }
 
 .field-error {
-  color: #ef4444;
+  color: var(--sii-orange);
   font-size: 0.75rem;
   margin-top: 0.25rem;
 }
