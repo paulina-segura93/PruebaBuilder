@@ -113,7 +113,7 @@ export default {
   .sidebar-link:hover,
   .sidebar-link.active {
     border-left: none;
-    border-bottom-color: #667eea;
+    border-bottom-color: var(--sii-blue);
   }
 }
 </style>
