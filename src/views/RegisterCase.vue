@@ -350,12 +350,12 @@ export default {
 }
 
 .btn-primary {
-  background: #667eea;
+  background: var(--sii-blue);
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #5a67d8;
+  background: var(--sii-blue-hover);
 }
 
 .btn.loading {
