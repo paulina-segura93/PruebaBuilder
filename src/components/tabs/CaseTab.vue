@@ -6,7 +6,7 @@
           v-model="formData.rutContribuyente"
           label="RUT del contribuyente"
           type="text"
-          placeholder="12.345.678-9"
+          placeholder="10.222.222-3"
           @update:modelValue="updateField('rutContribuyente', $event)"
         />
 
@@ -14,52 +14,8 @@
           v-model="formData.nombreContribuyente"
           label="Nombre del contribuyente"
           type="text"
+          placeholder="Juan Pérez"
           @update:modelValue="updateField('nombreContribuyente', $event)"
-        />
-
-        <FormField
-          v-model="formData.fechaPresentacion"
-          label="Fecha presentación"
-          type="date"
-          @update:modelValue="updateField('fechaPresentacion', $event)"
-        />
-
-        <FormField
-          v-model="formData.fechaTramite"
-          label="Fecha tramite"
-          type="date"
-          @update:modelValue="updateField('fechaTramite', $event)"
-        />
-
-        <FormField
-          v-model="formData.abogado"
-          label="Abogado"
-          type="text"
-          @update:modelValue="updateField('abogado', $event)"
-        />
-
-        <FormField
-          v-model="formData.causaTER"
-          label="Causa TER"
-          type="select"
-          :options="causaTEROptions"
-          @update:modelValue="updateField('causaTER', $event)"
-        />
-
-        <FormField
-          v-model="formData.estado"
-          label="Estado"
-          type="select"
-          :options="estadoOptions"
-          @update:modelValue="updateField('estado', $event)"
-        />
-
-        <FormField
-          v-model="formData.giroEmitido"
-          label="Giro emitido"
-          type="select"
-          :options="giroEmitidoOptions"
-          @update:modelValue="updateField('giroEmitido', $event)"
         />
       </div>
 
