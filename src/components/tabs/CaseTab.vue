@@ -50,8 +50,7 @@ export default {
     return {
       formData: {
         rutContribuyente: '',
-        nombreContribuyente: '',
-        observaciones: ''
+        nombreContribuyente: ''
       },
       documents: [
         { id: 'acto-reclamado', label: 'Acto Reclamado', file: null },
