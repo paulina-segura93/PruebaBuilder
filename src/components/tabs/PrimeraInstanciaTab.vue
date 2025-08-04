@@ -1,66 +1,60 @@
 <template>
   <div class="tab-content">
-    <div class="placeholder-content">
-      <h3>Primera Instancia</h3>
-      <p>Esta sección contiene información sobre la primera instancia del caso.</p>
-      
-      <!-- Basic form for now -->
-      <form class="case-form" @submit.prevent="handleSubmit">
-        <div class="form-grid">
-          <FormField
-            v-model="formData.fechaInicio"
-            label="Fecha inicio primera instancia"
-            type="date"
-            @update:modelValue="updateField('fechaInicio', $event)"
-          />
-
-          <FormField
-            v-model="formData.tribunal"
-            label="Tribunal de primera instancia"
-            type="text"
-            @update:modelValue="updateField('tribunal', $event)"
-          />
-
-          <FormField
-            v-model="formData.estado"
-            label="Estado"
-            type="select"
-            :options="estadoOptions"
-            @update:modelValue="updateField('estado', $event)"
-          />
-
-          <FormField
-            v-model="formData.fechaResolucion"
-            label="Fecha resolución"
-            type="date"
-            @update:modelValue="updateField('fechaResolucion', $event)"
-          />
-
-          <FormField
-            v-model="formData.resultado"
-            label="Resultado"
-            type="select"
-            :options="resultadoOptions"
-            @update:modelValue="updateField('resultado', $event)"
-          />
-
-          <FormField
-            v-model="formData.montoResolucion"
-            label="Monto resolución"
-            type="number"
-            @update:modelValue="updateField('montoResolucion', $event)"
-          />
-        </div>
+    <form class="case-form" @submit.prevent="handleSubmit">
+      <div class="form-grid">
+        <FormField
+          v-model="formData.fechaInicio"
+          label="Fecha inicio primera instancia"
+          type="date"
+          @update:modelValue="updateField('fechaInicio', $event)"
+        />
 
         <FormField
-          v-model="formData.observaciones"
-          label="Observaciones"
-          type="textarea"
-          class="full-width"
-          @update:modelValue="updateField('observaciones', $event)"
+          v-model="formData.tribunal"
+          label="Tribunal de primera instancia"
+          type="text"
+          @update:modelValue="updateField('tribunal', $event)"
         />
-      </form>
-    </div>
+
+        <FormField
+          v-model="formData.estado"
+          label="Estado"
+          type="select"
+          :options="estadoOptions"
+          @update:modelValue="updateField('estado', $event)"
+        />
+
+        <FormField
+          v-model="formData.fechaResolucion"
+          label="Fecha resolución"
+          type="date"
+          @update:modelValue="updateField('fechaResolucion', $event)"
+        />
+
+        <FormField
+          v-model="formData.resultado"
+          label="Resultado"
+          type="select"
+          :options="resultadoOptions"
+          @update:modelValue="updateField('resultado', $event)"
+        />
+
+        <FormField
+          v-model="formData.montoResolucion"
+          label="Monto resolución"
+          type="number"
+          @update:modelValue="updateField('montoResolucion', $event)"
+        />
+      </div>
+
+      <FormField
+        v-model="formData.observaciones"
+        label="Observaciones"
+        type="textarea"
+        class="full-width"
+        @update:modelValue="updateField('observaciones', $event)"
+      />
+    </form>
   </div>
 </template>
 
