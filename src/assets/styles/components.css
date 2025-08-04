@@ -101,8 +101,8 @@
 }
 
 .document-upload.drag-active {
-    border-color: #667eea;
-    background-color: #f0f4ff;
+    border-color: var(--sii-blue);
+    background-color: var(--sii-blue-light);
     transform: scale(1.02);
 }
 
