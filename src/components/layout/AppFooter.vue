@@ -98,7 +98,7 @@ export default {
 }
 
 .user-profile:hover {
-  color: #667eea;
+  color: var(--sii-blue);
 }
 
 .settings-btn {
