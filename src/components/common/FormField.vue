@@ -336,7 +336,7 @@ export default {
 .form-input:focus-visible,
 .form-select:focus-visible,
 .form-textarea:focus-visible {
-  outline: 2px solid #667eea;
+  outline: 2px solid var(--sii-blue);
   outline-offset: 2px;
 }
 
