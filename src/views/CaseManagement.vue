@@ -285,7 +285,7 @@ export default {
 
 .tab-button:hover {
   color: #475569;
-  background: rgba(102, 126, 234, 0.05);
+  background: var(--sii-blue-light);
 }
 
 .tab-button.active {
