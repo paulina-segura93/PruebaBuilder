@@ -124,21 +124,8 @@ export default {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.placeholder-content {
-  padding: 2rem;
-  text-align: center;
-  color: #64748b;
-}
-
-.placeholder-content h3 {
-  color: #1e293b;
-  margin-bottom: 1rem;
-}
-
 .case-form {
   max-width: 100%;
-  text-align: left;
-  margin-top: 2rem;
 }
 
 .form-grid {
