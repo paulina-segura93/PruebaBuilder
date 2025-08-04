@@ -1,89 +1,83 @@
 <template>
   <div class="tab-content">
-    <div class="placeholder-content">
-      <h3>Segunda Instancia</h3>
-      <p>Esta sección contiene información sobre la segunda instancia del caso.</p>
-      
-      <!-- Basic form for now -->
-      <form class="case-form" @submit.prevent="handleSubmit">
-        <div class="form-grid">
-          <FormField
-            v-model="formData.fechaApelacion"
-            label="Fecha apelación"
-            type="date"
-            @update:modelValue="updateField('fechaApelacion', $event)"
-          />
-
-          <FormField
-            v-model="formData.corteApelaciones"
-            label="Corte de Apelaciones"
-            type="select"
-            :options="corteOptions"
-            @update:modelValue="updateField('corteApelaciones', $event)"
-          />
-
-          <FormField
-            v-model="formData.estadoApelacion"
-            label="Estado apelación"
-            type="select"
-            :options="estadoOptions"
-            @update:modelValue="updateField('estadoApelacion', $event)"
-          />
-
-          <FormField
-            v-model="formData.fechaSentencia"
-            label="Fecha sentencia"
-            type="date"
-            @update:modelValue="updateField('fechaSentencia', $event)"
-          />
-
-          <FormField
-            v-model="formData.resultadoApelacion"
-            label="Resultado apelación"
-            type="select"
-            :options="resultadoOptions"
-            @update:modelValue="updateField('resultadoApelacion', $event)"
-          />
-
-          <FormField
-            v-model="formData.montoSentencia"
-            label="Monto sentencia"
-            type="number"
-            @update:modelValue="updateField('montoSentencia', $event)"
-          />
-
-          <FormField
-            v-model="formData.recurreCasacion"
-            label="Recurre casación"
-            type="select"
-            :options="siNoOptions"
-            @update:modelValue="updateField('recurreCasacion', $event)"
-          />
-
-          <FormField
-            v-model="formData.fechaCasacion"
-            label="Fecha casación"
-            type="date"
-            @update:modelValue="updateField('fechaCasacion', $event)"
-          />
-
-          <FormField
-            v-model="formData.motivoCasacion"
-            label="Motivo casación"
-            type="text"
-            @update:modelValue="updateField('motivoCasacion', $event)"
-          />
-        </div>
+    <form class="case-form" @submit.prevent="handleSubmit">
+      <div class="form-grid">
+        <FormField
+          v-model="formData.fechaApelacion"
+          label="Fecha apelación"
+          type="date"
+          @update:modelValue="updateField('fechaApelacion', $event)"
+        />
 
         <FormField
-          v-model="formData.observaciones"
-          label="Observaciones"
-          type="textarea"
-          class="full-width"
-          @update:modelValue="updateField('observaciones', $event)"
+          v-model="formData.corteApelaciones"
+          label="Corte de Apelaciones"
+          type="select"
+          :options="corteOptions"
+          @update:modelValue="updateField('corteApelaciones', $event)"
         />
-      </form>
-    </div>
+
+        <FormField
+          v-model="formData.estadoApelacion"
+          label="Estado apelación"
+          type="select"
+          :options="estadoOptions"
+          @update:modelValue="updateField('estadoApelacion', $event)"
+        />
+
+        <FormField
+          v-model="formData.fechaSentencia"
+          label="Fecha sentencia"
+          type="date"
+          @update:modelValue="updateField('fechaSentencia', $event)"
+        />
+
+        <FormField
+          v-model="formData.resultadoApelacion"
+          label="Resultado apelación"
+          type="select"
+          :options="resultadoOptions"
+          @update:modelValue="updateField('resultadoApelacion', $event)"
+        />
+
+        <FormField
+          v-model="formData.montoSentencia"
+          label="Monto sentencia"
+          type="number"
+          @update:modelValue="updateField('montoSentencia', $event)"
+        />
+
+        <FormField
+          v-model="formData.recurreCasacion"
+          label="Recurre casación"
+          type="select"
+          :options="siNoOptions"
+          @update:modelValue="updateField('recurreCasacion', $event)"
+        />
+
+        <FormField
+          v-model="formData.fechaCasacion"
+          label="Fecha casación"
+          type="date"
+          @update:modelValue="updateField('fechaCasacion', $event)"
+        />
+
+        <FormField
+          v-model="formData.motivoCasacion"
+          label="Motivo casación"
+          type="text"
+          @update:modelValue="updateField('motivoCasacion', $event)"
+        />
+      </div>
+
+      <FormField
+        v-model="formData.observaciones"
+        label="Observaciones"
+        type="textarea"
+        class="full-width"
+        @update:modelValue="updateField('observaciones', $event)"
+      />
+    </form>
   </div>
 </template>
 
