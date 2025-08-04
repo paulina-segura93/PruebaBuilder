@@ -19,14 +19,6 @@
         />
       </div>
 
-      <FormField
-        v-model="formData.observaciones"
-        label="Observaciones"
-        type="textarea"
-        class="full-width"
-        @update:modelValue="updateField('observaciones', $event)"
-      />
-
       <!-- Document upload section -->
       <DocumentUpload
         :documents="documents"
