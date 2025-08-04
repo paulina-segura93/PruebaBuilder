@@ -3,113 +3,21 @@
     <form class="case-form" @submit.prevent="handleSubmit">
       <div class="form-grid">
         <FormField
-          v-model="formData.tipoRecurso"
-          label="Tipo recurso"
-          type="select"
-          :options="tipoRecursoOptions"
-          @update:modelValue="updateField('tipoRecurso', $event)"
-        />
-
-        <FormField
-          v-model="formData.fechaInterposicion"
-          label="Fecha interposición"
-          type="date"
-          @update:modelValue="updateField('fechaInterposicion', $event)"
-        />
-
-        <FormField
-          v-model="formData.motivoReclamo"
-          label="Motivo reclamo"
-          type="select"
-          :options="motivoReclamoOptions"
-          @update:modelValue="updateField('motivoReclamo', $event)"
-        />
-
-        <FormField
-          v-model="formData.corte"
-          label="Corte"
-          type="select"
-          :options="corteOptions"
-          @update:modelValue="updateField('corte', $event)"
-        />
-
-        <FormField
-          v-model="formData.apoderados"
-          label="Apoderados contribuyente"
+          v-model="formData.rutContribuyente"
+          label="RUT del contribuyente"
           type="text"
-          @update:modelValue="updateField('apoderados', $event)"
+          placeholder="10.222.222-3"
+          @update:modelValue="updateField('rutContribuyente', $event)"
         />
 
         <FormField
-          v-model="formData.fechaSentencia"
-          label="Fecha sentencia"
-          type="date"
-          @update:modelValue="updateField('fechaSentencia', $event)"
-        />
-
-        <FormField
-          v-model="formData.decisionSentencia"
-          label="Decisión de sentencia"
-          type="select"
-          :options="decisionSentenciaOptions"
-          @update:modelValue="updateField('decisionSentencia', $event)"
-        />
-
-        <FormField
-          v-model="formData.recurrente"
-          label="Recurrente"
-          type="select"
-          :options="recurrenteOptions"
-          @update:modelValue="updateField('recurrente', $event)"
-        />
-
-        <FormField
-          v-model="formData.resultadoSentencia"
-          label="Resultado sentencia"
-          type="select"
-          :options="resultadoSentenciaOptions"
-          @update:modelValue="updateField('resultadoSentencia', $event)"
-        />
-
-        <FormField
-          v-model="formData.condenaCostas"
-          label="Condena en costas"
-          type="select"
-          :options="condenaCostasOptions"
-          @update:modelValue="updateField('condenaCostas', $event)"
-        />
-
-        <FormField
-          v-model="formData.montoCostas"
-          label="Monto costas"
-          type="number"
-          @update:modelValue="updateField('montoCostas', $event)"
-        />
-
-        <FormField
-          v-model="formData.eventoRelevante"
-          label="Evento relevante giro"
-          type="select"
-          :options="eventoRelevanteOptions"
-          @update:modelValue="updateField('eventoRelevante', $event)"
-        />
-
-        <FormField
-          v-model="formData.suspensionCobro"
-          label="Suspensión de cobro"
-          type="select"
-          :options="suspensionCobroOptions"
-          @update:modelValue="updateField('suspensionCobro', $event)"
+          v-model="formData.nombreContribuyente"
+          label="Nombre del contribuyente"
+          type="text"
+          placeholder="Juan Pérez"
+          @update:modelValue="updateField('nombreContribuyente', $event)"
         />
       </div>
-
-      <FormField
-        v-model="formData.observaciones"
-        label="Observaciones"
-        type="textarea"
-        class="full-width"
-        @update:modelValue="updateField('observaciones', $event)"
-      />
 
       <!-- Document upload section -->
       <DocumentUpload
@@ -141,67 +49,13 @@ export default {
   data() {
     return {
       formData: {
-        tipoRecurso: 'apelacion',
-        fechaInterposicion: '2023-07-15',
-        motivoReclamo: '',
-        corte: 'corte-suprema',
-        apoderados: '',
-        fechaSentencia: '2023-07-15',
-        decisionSentencia: 'ha-lugar-en-parte',
-        recurrente: 'ambos',
-        resultadoSentencia: 'favorable-en-parte',
-        condenaCostas: 'no',
-        montoCostas: 0,
-        eventoRelevante: 'no',
-        suspensionCobro: 'no',
-        observaciones: ''
+        rutContribuyente: '',
+        nombreContribuyente: ''
       },
       documents: [
-        { id: 'sentencia', label: 'Sentencia', file: null },
-        { id: 'suspension', label: 'Suspensión de cobro', file: null }
+        { id: 'acto-reclamado', label: 'Acto Reclamado', file: null }
       ],
-      // Form options
-      tipoRecursoOptions: [
-        { value: 'apelacion', label: 'Apelación' },
-        { value: 'casacion', label: 'Casación' },
-        { value: 'queja', label: 'Queja' }
-      ],
-      motivoReclamoOptions: [
-        { value: '', label: 'No seleccionado' },
-        { value: 'devolucion', label: 'Devolución' },
-        { value: 'multa', label: 'Multa' }
-      ],
-      corteOptions: [
-        { value: 'corte-suprema', label: 'Corte Suprema' },
-        { value: 'corte-apelaciones', label: 'Corte de Apelaciones' }
-      ],
-      decisionSentenciaOptions: [
-        { value: 'ha-lugar-en-parte', label: 'Ha lugar en parte' },
-        { value: 'rechaza', label: 'Rechaza' },
-        { value: 'acoge', label: 'Acoge' }
-      ],
-      recurrenteOptions: [
-        { value: 'ambos', label: 'Ambos' },
-        { value: 'contribuyente', label: 'Contribuyente' },
-        { value: 'sii', label: 'SII' }
-      ],
-      resultadoSentenciaOptions: [
-        { value: 'favorable-en-parte', label: 'Favorable en parte' },
-        { value: 'favorable', label: 'Favorable' },
-        { value: 'desfavorable', label: 'Desfavorable' }
-      ],
-      condenaCostasOptions: [
-        { value: 'no', label: 'No' },
-        { value: 'si', label: 'Sí' }
-      ],
-      eventoRelevanteOptions: [
-        { value: 'no', label: 'No' },
-        { value: 'si', label: 'Sí' }
-      ],
-      suspensionCobroOptions: [
-        { value: 'no', label: 'No' },
-        { value: 'si', label: 'Sí' }
-      ]
+      // Form options (none needed for basic text fields)
     }
   },
   watch: {
