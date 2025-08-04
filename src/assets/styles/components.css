@@ -192,7 +192,7 @@
 .form-input:focus,
 .form-textarea:focus {
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.15);
+    box-shadow: 0 4px 8px var(--sii-blue-light);
 }
 
 /* Skeleton loading for better UX */
