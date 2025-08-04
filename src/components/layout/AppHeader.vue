@@ -2,7 +2,11 @@
   <header class="header">
     <div class="header-content">
       <div class="logo">
-        <span class="logo-icon">⚖️</span>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F2a2e397d5061489eae69ab6ebf59f09f%2F467c74fdff5f43b2a2cfd2e4e68ed3e7?format=webp&width=800"
+          alt="SII - Servicio de Impuestos Internos"
+          class="logo-image"
+        />
         <h1>Sistema de Gestión de Causas</h1>
       </div>
       <nav class="header-nav">
