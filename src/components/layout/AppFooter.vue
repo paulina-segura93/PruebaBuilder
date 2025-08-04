@@ -120,7 +120,7 @@ export default {
 }
 
 .logo-small {
-  color: #667eea;
+  color: var(--sii-blue);
   font-weight: 600;
 }
 </style>
