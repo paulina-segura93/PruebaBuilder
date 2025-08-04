@@ -1,3 +1,17 @@
+/* SII Official Color Palette */
+:root {
+    --sii-blue: #0064A0;           /* PANTONE 301 U - R0 G100 B160 */
+    --sii-orange: #E6500E;         /* PANTONE 179 U - R230 G80 B10 */
+    --sii-gray: #737373;           /* PANTONE COOL GRAY 11 U - R115 G115 B115 */
+    --sii-blue-light: rgba(0, 100, 160, 0.1);
+    --sii-blue-hover: #005580;
+    --sii-orange-light: rgba(230, 80, 14, 0.1);
+    --sii-orange-hover: #CC4600;
+    --sii-gray-light: rgba(115, 115, 115, 0.1);
+    --sii-white: #ffffff;
+    --sii-light-gray: #f8fafc;
+}
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -7,7 +21,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f8fafc;
+    background-color: var(--sii-light-gray);
     color: #333;
     line-height: 1.6;
 }
