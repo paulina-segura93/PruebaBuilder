@@ -265,8 +265,8 @@ export default {
 .form-select:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: var(--sii-blue);
+  box-shadow: 0 0 0 3px var(--sii-blue-light);
   transform: translateY(-1px);
 }
 
