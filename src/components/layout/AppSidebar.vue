@@ -82,9 +82,9 @@ export default {
 
 .sidebar-link:hover,
 .sidebar-link.active {
-  background-color: #f1f5f9;
-  color: #475569;
-  border-left-color: #667eea;
+  background-color: var(--sii-blue-light);
+  color: var(--sii-blue);
+  border-left-color: var(--sii-blue);
 }
 
 .sidebar-icon {
