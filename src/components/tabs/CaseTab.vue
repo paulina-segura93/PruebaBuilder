@@ -59,12 +59,6 @@ export default {
       formData: {
         rutContribuyente: '',
         nombreContribuyente: '',
-        fechaPresentacion: '',
-        fechaTramite: '',
-        abogado: '',
-        causaTER: '',
-        estado: 'en-tramitacion',
-        giroEmitido: 'no',
         observaciones: ''
       },
       documents: [
