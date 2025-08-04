@@ -3,103 +3,63 @@
     <form class="case-form" @submit.prevent="handleSubmit">
       <div class="form-grid">
         <FormField
-          v-model="formData.tipoRecurso"
-          label="Tipo recurso"
-          type="select"
-          :options="tipoRecursoOptions"
-          @update:modelValue="updateField('tipoRecurso', $event)"
-        />
-
-        <FormField
-          v-model="formData.fechaInterposicion"
-          label="Fecha interposición"
-          type="date"
-          @update:modelValue="updateField('fechaInterposicion', $event)"
-        />
-
-        <FormField
-          v-model="formData.motivoReclamo"
-          label="Motivo reclamo"
-          type="select"
-          :options="motivoReclamoOptions"
-          @update:modelValue="updateField('motivoReclamo', $event)"
-        />
-
-        <FormField
-          v-model="formData.corte"
-          label="Corte"
-          type="select"
-          :options="corteOptions"
-          @update:modelValue="updateField('corte', $event)"
-        />
-
-        <FormField
-          v-model="formData.apoderados"
-          label="Apoderados contribuyente"
+          v-model="formData.rutContribuyente"
+          label="RUT del contribuyente"
           type="text"
-          @update:modelValue="updateField('apoderados', $event)"
+          placeholder="12.345.678-9"
+          @update:modelValue="updateField('rutContribuyente', $event)"
         />
 
         <FormField
-          v-model="formData.fechaSentencia"
-          label="Fecha sentencia"
+          v-model="formData.nombreContribuyente"
+          label="Nombre del contribuyente"
+          type="text"
+          @update:modelValue="updateField('nombreContribuyente', $event)"
+        />
+
+        <FormField
+          v-model="formData.fechaPresentacion"
+          label="Fecha presentación"
           type="date"
-          @update:modelValue="updateField('fechaSentencia', $event)"
+          @update:modelValue="updateField('fechaPresentacion', $event)"
         />
 
         <FormField
-          v-model="formData.decisionSentencia"
-          label="Decisión de sentencia"
+          v-model="formData.fechaTramite"
+          label="Fecha tramite"
+          type="date"
+          @update:modelValue="updateField('fechaTramite', $event)"
+        />
+
+        <FormField
+          v-model="formData.abogado"
+          label="Abogado"
+          type="text"
+          @update:modelValue="updateField('abogado', $event)"
+        />
+
+        <FormField
+          v-model="formData.causaTER"
+          label="Causa TER"
           type="select"
-          :options="decisionSentenciaOptions"
-          @update:modelValue="updateField('decisionSentencia', $event)"
+          :options="causaTEROptions"
+          @update:modelValue="updateField('causaTER', $event)"
         />
 
         <FormField
-          v-model="formData.recurrente"
-          label="Recurrente"
+          v-model="formData.estado"
+          label="Estado"
           type="select"
-          :options="recurrenteOptions"
-          @update:modelValue="updateField('recurrente', $event)"
+          :options="estadoOptions"
+          @update:modelValue="updateField('estado', $event)"
         />
 
         <FormField
-          v-model="formData.resultadoSentencia"
-          label="Resultado sentencia"
+          v-model="formData.giroEmitido"
+          label="Giro emitido"
           type="select"
-          :options="resultadoSentenciaOptions"
-          @update:modelValue="updateField('resultadoSentencia', $event)"
-        />
-
-        <FormField
-          v-model="formData.condenaCostas"
-          label="Condena en costas"
-          type="select"
-          :options="condenaCostasOptions"
-          @update:modelValue="updateField('condenaCostas', $event)"
-        />
-
-        <FormField
-          v-model="formData.montoCostas"
-          label="Monto costas"
-          type="number"
-          @update:modelValue="updateField('montoCostas', $event)"
-        />
-
-        <FormField
-          v-model="formData.eventoRelevante"
-          label="Evento relevante giro"
-          type="select"
-          :options="eventoRelevanteOptions"
-          @update:modelValue="updateField('eventoRelevante', $event)"
-        />
-
-        <FormField
-          v-model="formData.suspensionCobro"
-          label="Suspensión de cobro"
-          type="select"
-          :options="suspensionCobroOptions"
-          @update:modelValue="updateField('suspensionCobro', $event)"
+          :options="giroEmitidoOptions"
+          @update:modelValue="updateField('giroEmitido', $event)"
         />
       </div>
 
