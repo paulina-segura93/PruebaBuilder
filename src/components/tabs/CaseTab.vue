@@ -116,44 +116,18 @@ export default {
         { id: 'suspension', label: 'Suspensión de cobro', file: null }
       ],
       // Form options
-      tipoRecursoOptions: [
-        { value: 'apelacion', label: 'Apelación' },
-        { value: 'casacion', label: 'Casación' },
-        { value: 'queja', label: 'Queja' }
+      causaTEROptions: [
+        { value: '', label: 'Seleccionar...' },
+        { value: 'si', label: 'Sí' },
+        { value: 'no', label: 'No' }
       ],
-      motivoReclamoOptions: [
-        { value: '', label: 'No seleccionado' },
-        { value: 'devolucion', label: 'Devolución' },
-        { value: 'multa', label: 'Multa' }
+      estadoOptions: [
+        { value: 'en-tramitacion', label: 'En tramitación' },
+        { value: 'resuelto', label: 'Resuelto' },
+        { value: 'archivado', label: 'Archivado' },
+        { value: 'suspendido', label: 'Suspendido' }
       ],
-      corteOptions: [
-        { value: 'corte-suprema', label: 'Corte Suprema' },
-        { value: 'corte-apelaciones', label: 'Corte de Apelaciones' }
-      ],
-      decisionSentenciaOptions: [
-        { value: 'ha-lugar-en-parte', label: 'Ha lugar en parte' },
-        { value: 'rechaza', label: 'Rechaza' },
-        { value: 'acoge', label: 'Acoge' }
-      ],
-      recurrenteOptions: [
-        { value: 'ambos', label: 'Ambos' },
-        { value: 'contribuyente', label: 'Contribuyente' },
-        { value: 'sii', label: 'SII' }
-      ],
-      resultadoSentenciaOptions: [
-        { value: 'favorable-en-parte', label: 'Favorable en parte' },
-        { value: 'favorable', label: 'Favorable' },
-        { value: 'desfavorable', label: 'Desfavorable' }
-      ],
-      condenaCostasOptions: [
-        { value: 'no', label: 'No' },
-        { value: 'si', label: 'Sí' }
-      ],
-      eventoRelevanteOptions: [
-        { value: 'no', label: 'No' },
-        { value: 'si', label: 'Sí' }
-      ],
-      suspensionCobroOptions: [
+      giroEmitidoOptions: [
         { value: 'no', label: 'No' },
         { value: 'si', label: 'Sí' }
       ]
