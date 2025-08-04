@@ -273,8 +273,8 @@ export default {
 .form-input.error,
 .form-select.error,
 .form-textarea.error {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  border-color: var(--sii-orange);
+  box-shadow: 0 0 0 3px var(--sii-orange-light);
 }
 
 .form-select {
