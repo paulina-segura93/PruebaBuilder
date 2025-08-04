@@ -101,19 +101,14 @@ export default {
   data() {
     return {
       formData: {
-        tipoRecurso: 'apelacion',
-        fechaInterposicion: '2023-07-15',
-        motivoReclamo: '',
-        corte: 'corte-suprema',
-        apoderados: '',
-        fechaSentencia: '2023-07-15',
-        decisionSentencia: 'ha-lugar-en-parte',
-        recurrente: 'ambos',
-        resultadoSentencia: 'favorable-en-parte',
-        condenaCostas: 'no',
-        montoCostas: 0,
-        eventoRelevante: 'no',
-        suspensionCobro: 'no',
+        rutContribuyente: '',
+        nombreContribuyente: '',
+        fechaPresentacion: '',
+        fechaTramite: '',
+        abogado: '',
+        causaTER: '',
+        estado: 'en-tramitacion',
+        giroEmitido: 'no',
         observaciones: ''
       },
       documents: [
