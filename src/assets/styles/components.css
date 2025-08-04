@@ -107,18 +107,18 @@
 }
 
 .document-upload.file-selected {
-    border-color: #10b981;
-    background-color: #f0fdf4;
+    border-color: var(--sii-blue);
+    background-color: var(--sii-blue-light);
 }
 
 .document-upload.error {
-    border-color: #ef4444;
-    background-color: #fef2f2;
+    border-color: var(--sii-orange);
+    background-color: var(--sii-orange-light);
 }
 
 .document-upload.success {
-    border-color: #10b981;
-    background-color: #f0fdf4;
+    border-color: var(--sii-blue);
+    background-color: var(--sii-blue-light);
 }
 
 .document-icon {
