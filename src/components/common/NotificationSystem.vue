@@ -85,21 +85,21 @@ export default {
 }
 
 .notification-info {
-  background: #dbeafe;
-  color: #1e40af;
-  border-left: 4px solid #3b82f6;
+  background: var(--sii-blue-light);
+  color: var(--sii-blue);
+  border-left: 4px solid var(--sii-blue);
 }
 
 .notification-success {
-  background: #dcfce7;
-  color: #166534;
-  border-left: 4px solid #10b981;
+  background: var(--sii-blue-light);
+  color: var(--sii-blue);
+  border-left: 4px solid var(--sii-blue);
 }
 
 .notification-error {
-  background: #fef2f2;
-  color: #dc2626;
-  border-left: 4px solid #ef4444;
+  background: var(--sii-orange-light);
+  color: var(--sii-orange);
+  border-left: 4px solid var(--sii-orange);
 }
 
 .notification-warning {
