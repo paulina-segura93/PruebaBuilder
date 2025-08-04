@@ -156,12 +156,12 @@
 .form-input.error,
 .form-select.error,
 .form-textarea.error {
-    border-color: #ef4444;
-    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    border-color: var(--sii-orange);
+    box-shadow: 0 0 0 3px var(--sii-orange-light);
 }
 
 .field-error {
-    color: #ef4444;
+    color: var(--sii-orange);
     font-size: 0.75rem;
     margin-top: 0.25rem;
     display: block;
